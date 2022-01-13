@@ -37,29 +37,25 @@ public class Main {
         }
         System.out.println("input host (default 127.0.0.1) :");
         String ip = sc.nextLine();
-        if("".equals(ip))
-        {
+        if ("".equals(ip)) {
             ip = "127.0.0.1";
         }
 
         System.out.println("input port (default " + getDefaultPort(dbType) + ") :");
         String port = sc.nextLine();
-        if("".equals(port))
-        {
+        if ("".equals(port)) {
             port = getDefaultPort(dbType);
         }
 
         System.out.println("input username (default " + getDefaultUser(dbType) + ") :");
         String username = sc.nextLine();
-        if("".equals(username))
-        {
+        if ("".equals(username)) {
             username = getDefaultUser(dbType);
         }
 
         System.out.println("input password (default root) :");
         String passowrd = sc.nextLine();
-        if("".equals(passowrd))
-        {
+        if ("".equals(passowrd)) {
             passowrd = "root";
         }
 

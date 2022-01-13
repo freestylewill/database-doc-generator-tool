@@ -28,16 +28,16 @@ public abstract class Generator {
     protected String dbName;
     protected String docPath;
 
-    protected String rootPath = "D:\\tmp";
+    protected String rootPath = "D:/tmp";
 
     public Generator(String dbName, SimpleDataSource dataSource) {
         this.dataSource = dataSource;
         dao = new NutDao(dataSource);
         int i = dbName.indexOf("?");
-        if (i > -1){
-            dbName = dbName.substring(0,i);
+        if (i > -1) {
+            dbName = dbName.substring(0, i);
         }
-        System.err.println("dbName=========="+dbName);
+        System.err.println("dbName==========" + dbName);
         this.dbName = dbName;
         this.docPath = rootPath + File.separator + dbName + "-doc";
     }
@@ -71,7 +71,7 @@ public abstract class Generator {
         save2File(list);
         //保存word
 //        WordGenerator.createDoc(dbName, list);
-        WordGenerator.createDoc(docPath,dbName, list);
+        WordGenerator.createDoc(docPath, dbName, list);
 
     }
 

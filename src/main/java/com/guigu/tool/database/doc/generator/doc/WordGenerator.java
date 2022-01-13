@@ -45,8 +45,7 @@ public class WordGenerator {
             Writer writer = new OutputStreamWriter(new FileOutputStream(file), "utf-8");
             template.process(map, writer);
             writer.close();
-            new Html2DocConverter(name, rootDir + File
-                    .separator + dbName + ".doc")
+            new Html2DocConverter(name, rootDir + File.separator + dbName + ".doc")
                     .writeWordFile();
         } catch (Exception ex) {
             ex.printStackTrace();
